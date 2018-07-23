@@ -1,0 +1,26 @@
+extends layout
+block content
+        #form
+            form(action="./reply" method="post")
+                h3 Name
+                input(type="text" id="name" name="name")
+                h3 e-mail
+                input(type="text" id="email" name="email")
+                #radio-buttons
+                    h3 Are you attending?
+                    label(for="attending") Attending
+                    input(type="radio" name="attending" value="attending"  id="attending")
+                    label(for="notattending") Not Attending
+                    input(type="radio" name="attending" value="not-attending" id="notattending")
+                #dropdown
+                    h3 Number of Guests
+                    select(id="number-of-guests" name="numGuests")
+                        option 1
+                        option 2
+                        option 3
+                        option 4
+                        option 5
+                        option 6
+                        option 7
+                        option 8
+                input(type="submit")
