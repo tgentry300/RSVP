@@ -1,0 +1,17 @@
+extends layout
+block content
+    h1 Guest List
+    h2 Attending
+        if guestlist.length
+            each guest in guestlist
+                if guest.attending === 'attending'
+                    h3=guest.name
+                    p='E-mail: ' + guest.email
+                    p='Number of Guests: ' + guest.numGuests
+    h2 Not Attending
+        if guestlist.length
+            each guest in guestlist
+                if guest.attending === 'not-attending'    
+                    h3=guest.name
+                    p='E-mail: ' + guest.email
+                    p='Number of Guests: ' + guest.numGuests
